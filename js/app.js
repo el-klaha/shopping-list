@@ -15,7 +15,9 @@ $(document).ready(function() {
 	/* ERASE ITEM */
 
 	$('#item-list').on('click', '.del-btn', function(){
-		$(this).closest('li').remove();
+		$(this).closest('li').slideUp('fast', function(){
+			$(this).remove();
+		});
 	});
 
 	/* CHECK ITEM */
@@ -27,7 +29,9 @@ $(document).ready(function() {
 	/* CLEAR LIST */
 
 	$('.list').on('click', '.clr-btn', function(){
-		$('#item-list').empty();
+		$('li').fadeOut(function(){
+			$(this).empty();
+		});
 	});
 
 });
