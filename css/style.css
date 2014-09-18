@@ -201,4 +201,5 @@ li {
 
 .check h3 {
 	color: #FFF;
+	text-decoration: line-through;
 }
