@@ -40,7 +40,11 @@ $(document).ready(function() {
 
 function showItem () {
 	var item = $('#val').val();
-	$('#item-list').append('<li><h3>'+ item +'</h3><button class="check-btn"></button><button class="del-btn"></button></li>');
+
+	if ( item != "")
+	{
+		$('#item-list').append('<li><h3>'+ item +'</h3><button class="check-btn"></button><button class="del-btn"></button></li>');
+	}
 }
 
 function clearInput () {
